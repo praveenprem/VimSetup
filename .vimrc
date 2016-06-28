@@ -16,11 +16,6 @@ let g:airline_theme='luna'
 set mouse=a
 set ttymouse=xterm2
 
-"
-" NERDTree
-"
-let g:nerdtree_tabs_open_on_console_startup=1
-
 
 "
 " Syntastic settings
@@ -31,7 +26,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
@@ -42,3 +37,11 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+if argc() == 0 && !exists('s:std_in')
+    let g:nerdtree_tabs_open_on_console_startup=1
+endif
+
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
