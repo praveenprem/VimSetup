@@ -16,6 +16,7 @@ let g:airline_theme='luna'
 set mouse=a
 set ttymouse=xterm2
 
+set relativenumber
 
 "
 " Syntastic settings
@@ -46,14 +47,11 @@ endif
 
 let mapleader = ","
 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
-" Tab navigation like Firefox.
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-n>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-n>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 nnoremap <Leader>s      :SyntasticToggleMode<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
