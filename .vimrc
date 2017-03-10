@@ -16,6 +16,7 @@ let g:airline_theme='luna'
 set mouse=a
 set ttymouse=xterm2
 
+set relativenumber
 
 "
 " Syntastic settings
@@ -29,6 +30,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 
 
 "
@@ -43,5 +45,13 @@ if argc() == 0 && !exists('s:std_in')
     let g:nerdtree_tabs_open_on_console_startup=1
 endif
 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+let mapleader = ","
 
+
+nnoremap <C-n>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-n>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+
+nnoremap <Leader>s      :SyntasticToggleMode<CR>
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
