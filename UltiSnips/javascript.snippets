@@ -1,5 +1,10 @@
 
 snippet Tem
+import { Template } from "meteor/templating";
+
+import "./$1.html";
+import "./$1.scss";
+
 Template.$1.onCreated(function() {
 });
 
