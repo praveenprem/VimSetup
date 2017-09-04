@@ -40,6 +40,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+" Parses JSX even on .js files
+"
+let g:jsx_ext_required = 0
 
 if argc() == 0 && !exists('s:std_in')
     let g:nerdtree_tabs_open_on_console_startup=1

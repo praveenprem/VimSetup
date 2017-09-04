@@ -46,3 +46,6 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "bundle/vim-nerdtree-multicreate"]
+	path = bundle/vim-nerdtree-multicreate
+	url = git@github.com:oli77za/vim-nerdtree-multicreate.git
