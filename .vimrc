@@ -1,4 +1,3 @@
-execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
@@ -11,6 +10,15 @@ set expandtab
 set mouse=a
 set ttymouse=xterm2
 set relativenumber
+
+" To disable a plugin, add its bundle name to the following list
+let g:pathogen_disabled = []
+if v:version <= '704'
+    call add(g:pathogen_disabled, 'ultisnips')
+endif
+execute pathogen#infect()
+
+
 
 " =============================================================================
 " Key bindings (mappings)
@@ -54,15 +62,17 @@ set statusline+=%*
 " Ultisnips
 " https://github.com/SirVer/ultisnips.git
 "
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
 "
 " CTRL-P
 " https://github.com/kien/ctrlp.vim.git
 "
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_root_markers = ['.ctrlp']
+let g:ctrlp_max_files=0
 
 "
 " NEDR Tree
@@ -71,4 +81,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 if argc() == 0 && !exists('s:std_in')
     let g:nerdtree_tabs_open_on_console_startup=1
 endif
+
+"
+" YouCompleteMe
+" https://github.com/Valloric/YouCompleteMe.git
+"
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
 
