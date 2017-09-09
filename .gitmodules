@@ -49,3 +49,6 @@
 [submodule "bundle/vim-nerdtree-multicreate"]
 	path = bundle/vim-nerdtree-multicreate
 	url = git@github.com:oli77za/vim-nerdtree-multicreate.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
