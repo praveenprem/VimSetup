@@ -13,7 +13,7 @@ set relativenumber
 
 " To disable a plugin, add its bundle name to the following list
 let g:pathogen_disabled = []
-if v:version <= '704'
+if v:version < '704'
     call add(g:pathogen_disabled, 'ultisnips')
 endif
 execute pathogen#infect()
