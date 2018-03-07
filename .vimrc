@@ -29,7 +29,7 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <C-n>   :tabnext<CR>
 inoremap <C-n>   <Esc>:tabnext<CR>i
 nnoremap <Leader>s      :SyntasticToggleMode<CR>
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <Leader>t <plug>NERDTreeTabsToggle<CR>
 
 
 
