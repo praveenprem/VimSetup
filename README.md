@@ -8,7 +8,7 @@ install the setup by running the following commands (will clear the existing con
 
 ```sh
 rm -rf ~/.vim ~/.vimrc
-git clone https://github.com/oli77za/VimSetup.git ~/.vim
+git clone git@github.com:praveenprem/VimSetup.git ~/.vim
 cd ~/.vim
 git submodule update --init --recursive
 cd bundle/YouCompleteMe
