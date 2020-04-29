@@ -6,10 +6,13 @@ set term=screen-256color
 
 set laststatus=2
 set shiftwidth=4
+set tabstop=4
 set expandtab
+set autoindent
 set mouse=a
 set ttymouse=xterm2
 set relativenumber
+set spelllang=en_gb
 
 " To disable a plugin, add its bundle name to the following list
 let g:pathogen_disabled = []
@@ -89,5 +92,18 @@ endif
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
+"
+" Terrafom
+"
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_commentstring='//%s'
+"let g:terraform_fmt_on_save=1
+
 set backspace=indent,eol,start
-set foldmethod=indent
+"set foldmethod=indent
+
+augroup json_tpl
+  au!
+    autocmd BufNewFile,BufRead *.json.tpl   set syntax=json
+augroup END
