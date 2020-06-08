@@ -44,7 +44,7 @@ map <Leader>t <plug>NERDTreeTabsToggle<CR>
 " https://github.com/bling/vim-airline
 " https://github.com/vim-airline/vim-airline-themes
 "
-let g:airline_theme='luna'
+let g:airline_theme='papercolor'
 
 "
 " Syntastic settings
